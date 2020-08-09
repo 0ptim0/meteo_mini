@@ -1,0 +1,12 @@
+BME280.c:31:6:fix_bug_i2c	4	static
+BME280.c:40:6:I2C_Init	8	static
+BME280.c:70:6:start	16	static
+BME280.c:80:6:stop	4	static
+BME280.c:84:6:write	16	static
+BME280.c:93:6:BME_Init	8	static
+BME280.c:104:6:BME_reset	8	static
+BME280.c:132:9:T_compensation	32	static
+BME280.c:145:10:P_compensation	64	static
+BME280.c:165:10:H_compensation	24	static
+BME280.c:180:6:BME_Measure	40	static
+BME280.c:214:6:BME_Begin	8	static
