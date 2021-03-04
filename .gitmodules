@@ -1,0 +1,6 @@
+[submodule "freertos"]
+	path = freertos
+	url = git@github.com:0ptim0/freertos.git
+[submodule "olib"]
+	path = olib
+	url = git@github.com:0ptim0/olib.git

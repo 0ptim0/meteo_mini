@@ -1,7 +1,0 @@
-"CMSIS/src/system_stm32f4xx.o"
-"Src/BME280.o"
-"Src/SSD1306.o"
-"Src/clock.o"
-"Src/font.o"
-"Src/main.o"
-"Startup/startup_stm32f401xe.o"
