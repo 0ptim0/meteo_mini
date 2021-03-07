@@ -1,7 +1,7 @@
 #include "stm32f401_conf.h"
 
 int main(void) {
-	vMeteo();
+    vMeteo();
     while(1) {
     }
 }
