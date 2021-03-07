@@ -1,7 +1,6 @@
 #include "stm32f401_conf.h"
 
 void vMeteoMeasure(void *pvParameters) {
-    BaseType_t err = pdFALSE;
     I2C_InitOnce();
     SSD1306_Init();
     SSD1306_DisplayClear();

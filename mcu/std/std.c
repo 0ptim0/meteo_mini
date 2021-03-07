@@ -1,3 +1,4 @@
+/* Function for convert float to char */
 char *ftc(float x, char *p, int length) {
     char *s = p + length;
     int decimals;
@@ -22,4 +23,14 @@ char *ftc(float x, char *p, int length) {
     if (x < 0) *--s = '-';
 
     return s;
+}
+
+/* Function for compare of two strings */
+int strcomp(char *str1, char *str2) {
+    for(int i = 0; (*(str1 + i) != '\0') || (*(str2 + i) != '\0'); i++) {
+        if(*(str1 + i) != *(str2 + i)) {
+            return 0;
+        }
+    }
+    return 1;
 }
