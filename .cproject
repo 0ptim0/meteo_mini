@@ -98,6 +98,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/meteo_mini/olib/i2c}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/meteo_mini/mcu/std}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/meteo_mini/olib/usart}&quot;"/>
                                     								
                                 </option>
                                 								

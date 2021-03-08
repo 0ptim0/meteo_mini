@@ -26,8 +26,27 @@ void vMeteoMeasure(void *pvParameters) {
     }
 }
 
+void USART_QueueSend(char *str) {
+    uint8_t data;
+    for (int i = 0; *(str + i) != '\0'; i++) {
+        data = *(str + i);
+        xQueueSend(USART_Queue, &data, 0);
+    }
+}
+
+void vMeteoTransmit(void *pvParameters) {
+    USART_InitOnce();
+    for(;;) {
+        USART_QueueSend("PRIVET");
+        vTaskDelay(1);
+        USART_Transaction(USART2, USART_Queue);
+        vTaskDelay(1000);
+    }
+}
+
 void vMeteo(void) {
     gpio_config();
-    xTaskCreate(vMeteoMeasure, "MeteoMeasure", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
+    //xTaskCreate(vMeteoMeasure, "MeteoMeasure", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
+    xTaskCreate(vMeteoTransmit, "MeteoTransmit", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
     vTaskStartScheduler();
 }
