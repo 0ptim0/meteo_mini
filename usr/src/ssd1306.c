@@ -64,10 +64,10 @@ void SSD1306_SetCursorPage(uint8_t page, uint8_t col) {
     if(col > SSD1306_Width) {
         return;
     }
-    SSD1306_QueueSend(0x00, SSD1306_Command);  		// Init null column
+    SSD1306_QueueSend(0x00, SSD1306_Command);         // Init null column
     SSD1306_QueueSend(0x10, SSD1306_Command);
-    SSD1306_QueueSend(0xB0 + page, SSD1306_Command); // Set page number
-    for(int i = 0; i < col; i++) {  				// Shift pointer
+    SSD1306_QueueSend(0xB0 + page, SSD1306_Command);  // Set page number
+    for(int i = 0; i < col; i++) {                    // Shift pointer
         SSD1306_QueueSend(0x00, SSD1306_OnlyData);
     }
     SSD1306_Write();
