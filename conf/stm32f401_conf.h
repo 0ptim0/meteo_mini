@@ -23,6 +23,7 @@
 #include "init.h"
 #include "i2c.h"
 #include "usart.h"
+#include "cli.h"
 #include "ssd1306.h"
 #include "bme280.h"
 #include "meteo.h"

@@ -118,7 +118,6 @@ static void BME280_GetMeasureValue(void) {
     BME280.Measurement.Pressure = BME280_PresCompensate(P);
     BME280.Measurement.Temperature = BME280_TempCompensate(T);
     BME280.Measurement.Humiduty = BME280_HumCompensate(H);
-
 }
 
 static void BME280_Write(void) {

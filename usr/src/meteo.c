@@ -1,11 +1,10 @@
 #include "stm32f401_conf.h"
 
 void vMeteoMeasure(void *pvParameters) {
-    I2C_InitOnce();
     SSD1306_Init();
     SSD1306_DisplayClear();
     BME280_Init();
-    BME280_Settings(BME280_Oversampling_X1, BME280_Oversampling_X1, BME280_Oversampling_X1);
+    BME280_Settings(BME280_Oversampling_X16, BME280_Oversampling_X16, BME280_Oversampling_X16);
     for(;;) {
             BME280_Measure();
             SSD1306_SetCursorPage(0,0);
@@ -26,27 +25,17 @@ void vMeteoMeasure(void *pvParameters) {
     }
 }
 
-void USART_QueueSend(char *str) {
-    uint8_t data;
-    for (int i = 0; *(str + i) != '\0'; i++) {
-        data = *(str + i);
-        xQueueSend(USART_Queue, &data, 0);
-    }
-}
-
-void vMeteoTransmit(void *pvParameters) {
-    USART_InitOnce();
+void vMeteoCLI(void *pvParameters) {
     for(;;) {
-        USART_QueueSend("PRIVET");
-        vTaskDelay(1);
-        USART_Transaction(USART2, USART_Queue);
-        vTaskDelay(1000);
+    	CLI_Transmit();
     }
 }
 
 void vMeteo(void) {
     gpio_config();
-    //xTaskCreate(vMeteoMeasure, "MeteoMeasure", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
-    xTaskCreate(vMeteoTransmit, "MeteoTransmit", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
+    USART_InitOnce();
+    I2C_InitOnce();
+    xTaskCreate(vMeteoMeasure, "MeteoMeasure", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
+    xTaskCreate(vMeteoCLI, "MeteoTransmit", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
     vTaskStartScheduler();
 }

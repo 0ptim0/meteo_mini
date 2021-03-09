@@ -87,23 +87,18 @@ void SSD1306_DisplayClear(void) {
 }
 
 void SSD1306_PrintString(char *print) {
-	static int c;
     for(int i = 0; (*(print + i) != '\0' && i < 127); i++) {
         for(int j = 0; j < 6; j++) {
             SSD1306_QueueSend(Font8[(*(print + i) - 32) * 6 + j], SSD1306_OnlyData);
-        c++;
         }
     }
     SSD1306_Write();
-    c = 0;
 }
-
 
 void SSD1306_PrintNum(float print) {
     char print_out[127] = {};
     SSD1306_PrintString(ftc(print, print_out, 126));
 }
-
 
 void SSD1306_DisplayInverse(void) {
     if(SSD1306.Inv) {
