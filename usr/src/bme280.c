@@ -141,7 +141,7 @@ static void BME280_Reset(void) {
     BME280_QueueSend(0xE0);
     BME280_QueueSend(0xB6);
     BME280_Write();
-    vTaskDelay(10);
+    vTaskDelay(1);
 }
 
 void BME280_Settings(uint8_t TempSampl, uint8_t PresSampl, uint8_t HumSampl) {
@@ -155,7 +155,6 @@ void BME280_Measure(void) {
     BME280_QueueSend(0xF4);
     BME280_QueueSend(BME280.Settings | BME280_ForcedMode);
     BME280_Write();
-    vTaskDelay(10);
     BME280_Read(0xF7, 8);
     BME280_GetMeasureValue();
 }
