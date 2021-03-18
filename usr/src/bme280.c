@@ -121,8 +121,7 @@ static void BME280_GetMeasureValue(void) {
 }
 
 static void BME280_Write(void) {
-
-	BME280_Control_Byte(BME280_WriteBit);
+    BME280_Control_Byte(BME280_WriteBit);
     address = (BME280_Address << 1) | (BME280.ControlByte);
     I2C_Transaction(I2C1, address, 0, I2C_Queue);
 }
