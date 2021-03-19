@@ -8,15 +8,17 @@ void vMeteoMeasure(void *pvParameters) {
     BME280_Init();
     BME280_Settings(BME280_Oversampling_X16, BME280_Oversampling_X16, BME280_Oversampling_X16);
     _init = pdTRUE;
-    for(;;) {
+    while(1) {
             BME280_Measure();
-            vTaskDelay(1000);
+            vTaskDelay(100);
     }
 }
 
 void vMeteoPrint(void *pvParameters) {
-    while(_init == pdFALSE);
-    for(;;) {
+    if(_init == pdFALSE) {
+    	vTaskDelay(1000);
+    }
+    while(1) {
         SSD1306_SetCursorPage(0,0);
         SSD1306_PrintString("METEO");
         SSD1306_SetCursorPage(1,0);
@@ -36,9 +38,9 @@ void vMeteoPrint(void *pvParameters) {
 }
 
 void vMeteoCLI(void *pvParameters) {
-    for(;;) {
+	while(1) {
         CLI_Transmit();
-        vTaskDelay(1000);
+        vTaskDelay(100);
     }
 }
 

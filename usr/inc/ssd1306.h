@@ -1,3 +1,6 @@
+/* Size of buf */
+#define SSD1306_LengthBuf 8192
+
 /* Display parameters */
 #define SSD1306_Heigth 32
 #define SSD1306_Width 128

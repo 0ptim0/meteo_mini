@@ -4,6 +4,7 @@ BME280_t BME280;
 static uint8_t address;
 static uint32_t val;
 static short buf[512];
+static QueueHandle_t BME280_Queue;
 
 BME280_S32_t t_fine;
 
@@ -66,12 +67,12 @@ static void BME280_Control_Byte(uint8_t type) {
 }
 
 static void BME280_QueueSend(uint8_t data) {
-    xQueueSend(I2C_Queue, &data, 0);
+    xQueueSend(BME280_Queue, &data, 0);
 }
 
 static void BME280_GetCalibValue(void) {
     static int i;
-    while(xQueueReceive(I2C_Queue, &val, 0) != errQUEUE_EMPTY) {
+    while(xQueueReceive(BME280_Queue, &val, 0) != errQUEUE_EMPTY) {
         buf[i] = val;
         i++;
     }
@@ -100,7 +101,7 @@ static void BME280_GetCalibValue(void) {
 static void BME280_GetMeasureValue(void) {
     static int i;
     int T, P, H;
-    while(xQueueReceive(I2C_Queue, &val, 0) != errQUEUE_EMPTY) {
+    while(xQueueReceive(BME280_Queue, &val, 0) != errQUEUE_EMPTY) {
         buf[i] = val;
         i++;
     }
@@ -123,17 +124,17 @@ static void BME280_GetMeasureValue(void) {
 static void BME280_Write(void) {
     BME280_Control_Byte(BME280_WriteBit);
     address = (BME280_Address << 1) | (BME280.ControlByte);
-    I2C_Transaction(I2C1, address, 0, I2C_Queue);
+    I2C_Transaction(I2C1, address, 0, BME280_Queue);
 }
 
 static void BME280_Read(uint8_t reg, uint8_t length) {
     BME280_Control_Byte(BME280_WriteBit);
     address = (BME280_Address << 1) | (BME280.ControlByte);
     BME280_QueueSend(reg);
-    I2C_Transaction(I2C1, address, 0, I2C_Queue);
+    I2C_Transaction(I2C1, address, 0, BME280_Queue);
     BME280_Control_Byte(BME280_ReadBit);
     address = (BME280_Address << 1) | (BME280.ControlByte);
-    I2C_Transaction(I2C1, address, length, I2C_Queue);
+    I2C_Transaction(I2C1, address, length, BME280_Queue);
 }
 
 static void BME280_Reset(void) {
@@ -159,6 +160,7 @@ void BME280_Measure(void) {
 }
 
 void BME280_Init(void) {
+	BME280_Queue = xQueueCreate(BME280_LengthBuf, sizeof(uint8_t));
     BME280_Reset();
     BME280_Read(0x88, 26);
     BME280_GetCalibValue();

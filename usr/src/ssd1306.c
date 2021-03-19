@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 SSD1306_t SSD1306;
+static QueueHandle_t SSD1306_Queue;
 
 static void SSD1306_ControlByte(uint8_t type) {
     switch(type) {
@@ -22,18 +23,19 @@ static void SSD1306_ControlByte(uint8_t type) {
 static void SSD1306_QueueSend(uint8_t data, uint8_t type) {
     if(SSD1306.ContinuationBit != 1) {
         SSD1306_ControlByte(type);
-        xQueueSend(I2C_Queue, &(SSD1306.ControlByte), 100);
+        xQueueSend(SSD1306_Queue, &(SSD1306.ControlByte), 100);
     }
-    xQueueSend(I2C_Queue, &data, 100);
+    xQueueSend(SSD1306_Queue, &data, 100);
 }
 
 static void SSD1306_Write(void) {
     uint8_t address = (SSD1306_Address << 1) | SSD1306_WriteMode;
-    I2C_Transaction(I2C1, address, 0, I2C_Queue);
+    I2C_Transaction(I2C1, address, 0, SSD1306_Queue);
     SSD1306.ContinuationBit = 0;
 }
 
 void SSD1306_Init(void) {
+	SSD1306_Queue = xQueueCreate(SSD1306_LengthBuf, sizeof(uint8_t));
     SSD1306_QueueSend(0xAE, SSD1306_Command); // 0xAE - OFF display, OxAF - OFN display
     SSD1306_QueueSend(0xA8, SSD1306_Command); // Set multiplex ratio:
     SSD1306_QueueSend(0x1F, SSD1306_Command); // 128x64
