@@ -121,8 +121,7 @@ static void BME280_GetMeasureValue(void) {
 }
 
 static void BME280_Write(void) {
-
-	BME280_Control_Byte(BME280_WriteBit);
+    BME280_Control_Byte(BME280_WriteBit);
     address = (BME280_Address << 1) | (BME280.ControlByte);
     I2C_Transaction(I2C1, address, 0, I2C_Queue);
 }
@@ -141,7 +140,7 @@ static void BME280_Reset(void) {
     BME280_QueueSend(0xE0);
     BME280_QueueSend(0xB6);
     BME280_Write();
-    vTaskDelay(10);
+    vTaskDelay(1);
 }
 
 void BME280_Settings(uint8_t TempSampl, uint8_t PresSampl, uint8_t HumSampl) {
@@ -155,7 +154,6 @@ void BME280_Measure(void) {
     BME280_QueueSend(0xF4);
     BME280_QueueSend(BME280.Settings | BME280_ForcedMode);
     BME280_Write();
-    vTaskDelay(10);
     BME280_Read(0xF7, 8);
     BME280_GetMeasureValue();
 }
