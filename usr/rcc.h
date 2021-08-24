@@ -1,6 +1,7 @@
 #include "stm32_base.h"
 
-class rcc {
+class rcc 
+{
 private:
     RCC_ClkInitTypeDef RCC_ClkInitStructure;
     RCC_OscInitTypeDef RCC_OscInitStructure;

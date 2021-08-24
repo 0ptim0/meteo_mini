@@ -25,8 +25,8 @@
     },
     "makefile.launchConfigurations": [
         {
-            "cwd": "/home/optim/stm32/projects/electric_load/build",
-            "binaryPath": "/home/optim/stm32/projects/electric_load/build/electric_load.elf",
+            "cwd": "/home/optim/stm32/projects/meteo_mini/build",
+            "binaryPath": "/home/optim/stm32/projects/meteo_mini/build/meteo_mini.elf",
             "binaryArgs": []
         }
     ],

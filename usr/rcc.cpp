@@ -1,7 +1,8 @@
 #include "stm32_base.h"
 #include "rcc.h"
 
-void rcc::InitClock() {
+void rcc::InitClock() 
+{
 
     RCC_OscInitStructure.OscillatorType = RCC_OSCILLATORTYPE_HSE;
     RCC_OscInitStructure.HSEState = RCC_HSE_ON;
@@ -24,7 +25,8 @@ void rcc::InitClock() {
     }
 }
 
-void rcc::InitPeriph() {
+void rcc::InitPeriph() 
+{
     __HAL_RCC_GPIOB_CLK_ENABLE();
     __HAL_RCC_I2C1_CLK_ENABLE();
 }
