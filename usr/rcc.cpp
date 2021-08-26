@@ -3,7 +3,6 @@
 
 void rcc::InitClock() 
 {
-
     RCC_OscInitStructure.OscillatorType = RCC_OSCILLATORTYPE_HSE;
     RCC_OscInitStructure.HSEState = RCC_HSE_ON;
     RCC_OscInitStructure.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
