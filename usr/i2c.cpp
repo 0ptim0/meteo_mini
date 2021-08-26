@@ -3,12 +3,11 @@
 
 static SemaphoreHandle_t mutex;
 static SemaphoreHandle_t semaphore;
-static QueueHandle_t queue;
 
 void i2c::Init(void)
-{
+{   
+    HAL_I2C_Init(&I2C_InitStructure);
     if(mutex == NULL) mutex = xSemaphoreCreateMutex();
-    if(queue == NULL) queue = xQueueCreate(this->length, sizeof(uint8_t));
     if(semaphore == NULL) semaphore = xSemaphoreCreateBinary();
 }
 
@@ -35,6 +34,7 @@ int i2c::EV_Handler(void)
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
     HAL_I2C_EV_IRQHandler(&I2C_InitStructure);
+
     if(I2C_InitStructure.State == HAL_I2C_STATE_READY) {
         xSemaphoreGiveFromISR(semaphore, &xHigherPriorityTaskWoken);
         if(xHigherPriorityTaskWoken == pdTRUE) {
@@ -45,5 +45,5 @@ int i2c::EV_Handler(void)
 
 int i2c::ER_Handler(void) 
 {
-    HAL_I2C_ER_IRQHandler(&I2C_InitStructure);
+    while(1);
 }

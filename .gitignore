@@ -1,6 +1,5 @@
 *.o
 build/
-*.log
 .cortex*
 *.map
 *.log
