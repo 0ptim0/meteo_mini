@@ -103,7 +103,8 @@ clean:
 
 flash: $(PROJECT).bin
 	st-flash write $(PROJECT).bin 0x08000000
-
+	sudo st-flash reset
+	
 erase:
 	st-flash erase
 

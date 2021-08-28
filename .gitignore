@@ -1,4 +1,4 @@
-*.o
+**.o
 build/
 .cortex*
 *.map

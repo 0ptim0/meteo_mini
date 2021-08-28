@@ -1,6 +1,8 @@
 #include "stm32_base.h"
 
-class i2c 
+#pragma once
+
+class i2c
 {
 private:
     I2C_HandleTypeDef I2C_InitStructure;
