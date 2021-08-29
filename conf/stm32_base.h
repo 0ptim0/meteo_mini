@@ -4,6 +4,9 @@
 /** HAL */
 #include "stm32_hal_conf.h"
 
+/** ERRNO */
+#include "errno.h"
+
 /** FreeRTOS */
 #include "FreeRTOS.h"
 #include "task.h"

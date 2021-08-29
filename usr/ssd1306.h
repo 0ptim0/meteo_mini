@@ -20,6 +20,19 @@
 #define SSD1306_WriteMode 0x00
 #define SSD1306_ReadMode 0x01
 
+/**
+ * \file 
+ * \brief SSD1306 display header
+ * \detailed Consists of defines and SSD1306 class
+ */
+
+struct ssd1306_cfg
+{
+    i2c_class i2c;
+    gpio_class gpio;
+    
+}
+
 class ssd1306 
 {
 private:
@@ -32,13 +45,10 @@ private:
     void Command(uint8_t cmd);
     void Data(uint8_t data);
 public:
-    // typedef int (ssd1306::*transmit_disp)(uint8_t *, uint16_t, uint16_t);
-    // typedef int (i2c::*transmit_i2c)(uint8_t *, uint16_t, uint16_t);
-    // transmit_disp Transmit;
-    ssd1306() {
+    ssd1306() 
+    {
         ptr = 0;
         continuation = 0;
-        // Transmit = (oi2c.Transmit);
     }
     void Init(void);
 

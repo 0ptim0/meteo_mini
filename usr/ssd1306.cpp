@@ -66,3 +66,16 @@ void ssd1306::Data(uint8_t data)
     ControlByte(SSD1306_Data);
     AddToBuf(data);
 }
+
+
+extern "C" {
+    void I2C1_EV_IRQHandler()
+    {
+        oI2C1.EV_Handler();
+    }
+
+    void I2C1_ER_IRQHandler() 
+    {
+        oI2C1.ER_Handler();
+    }
+}

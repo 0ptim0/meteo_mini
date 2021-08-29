@@ -1,14 +1,69 @@
 #include "stm32_base.h"
 #include "gpio.h"
 
-void gpio::Init() 
+int gpio_class::Init() 
 {
-    GPIO_InitStructure.Pin = GPIO_PIN_6;
-    GPIO_InitStructure.Mode = GPIO_MODE_AF_OD;
-    GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;
-    HAL_GPIO_Init(GPIOB, &GPIO_InitStructure);
-    GPIO_InitStructure.Pin = GPIO_PIN_7;
-    GPIO_InitStructure.Mode = GPIO_MODE_AF_OD;
-    GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;
-    HAL_GPIO_Init(GPIOB, &GPIO_InitStructure);
+    int rv;
+    HAL_GPIO_Init(gpio_cfg->GPIO, &(gpio_cfg->GPIO_InitStructure));
+    if(rv = this->ClockEnable() != 0) return rv;
 }
+
+int gpio_class::ClockEnable(void)
+{
+    switch (reinterpret_cast<uint32_t>(gpio_cfg->GPIO)) {
+
+    #ifdef GPIOA
+            case GPIOA_BASE:
+                __HAL_RCC_GPIOA_CLK_ENABLE();
+                break;
+    #endif
+
+#ifdef GPIOB
+        case GPIOB_BASE:
+            __HAL_RCC_GPIOB_CLK_ENABLE();
+            break;
+#endif
+
+#ifdef GPIOC
+        case GPIOC_BASE:
+            __HAL_RCC_GPIOC_CLK_ENABLE();
+            break;
+#endif
+
+#ifdef GPIOD
+        case GPIOD_BASE:
+            __HAL_RCC_GPIOD_CLK_ENABLE();
+            break;
+#endif
+
+#ifdef GPIOE
+        case GPIOE_BASE:
+            __HAL_RCC_GPIOE_CLK_ENABLE();
+            break;
+#endif
+
+#ifdef GPIOF
+        case GPIOF_BASE:
+            __HAL_RCC_GPIOF_CLK_ENABLE();
+            break;
+#endif
+
+#ifdef GPIOG
+        case GPIOG_BASE:
+            __HAL_RCC_GPIOG_CLK_ENABLE();
+            break;
+#endif
+
+#ifdef GPIOH
+        case GPIOH_BASE:
+            __HAL_RCC_GPIOH_CLK_ENABLE();
+            break;
+#endif
+
+        default:
+            return EINVAL;
+    }
+
+    return 0;
+}
+

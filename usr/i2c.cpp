@@ -4,14 +4,18 @@
 static SemaphoreHandle_t mutex;
 static SemaphoreHandle_t semaphore;
 
-void i2c::Init(void)
+int
+
+int i2c_class::Init(void)
 {   
-    HAL_I2C_Init(&I2C_InitStructure);
+    int rv;
+    if(rv = this->ClockEnable() != 0) return rv;
+    rv = HAL_I2C_Init(&(cfg->I2C_InitStructure);
     if(mutex == NULL) mutex = xSemaphoreCreateMutex();
     if(semaphore == NULL) semaphore = xSemaphoreCreateBinary();
 }
 
-int i2c::Transmit(uint8_t *pdata, uint16_t length, uint16_t address) 
+int i2c_class::Transmit(uint8_t *pdata, uint16_t length, uint16_t address) 
 {
     if(xSemaphoreTake(mutex, timeout) == pdTRUE) {
 
@@ -29,7 +33,7 @@ int i2c::Transmit(uint8_t *pdata, uint16_t length, uint16_t address)
     }
 }
 
-int i2c::EV_Handler(void) 
+int i2c_class::EV_Handler(void) 
 {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
@@ -43,7 +47,7 @@ int i2c::EV_Handler(void)
     }
 }
 
-int i2c::ER_Handler(void) 
+int i2c_class::ER_Handler(void) 
 {
     while(1);
 }
