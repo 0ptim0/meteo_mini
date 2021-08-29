@@ -1,9 +1,13 @@
 #include "stm32_base.h"
 #include "gpio.h"
 
-int gpio_class::Init() 
-{
+int gpio_class::Init(GPIO_TypeDef *GPIO, uint16_t GPIO_PIN, uint16_t GPIO_MODE, uint16_t GPIO_SPEED) 
+{   
     int rv;
+    gpio_cfg->GPIO = GPIO;
+    gpio_cfg->GPIO_InitStructure.Pin = GPIO_PIN;
+    gpio_cfg->GPIO_InitStructure.Mode = GPIO_MODE;
+    gpio_cfg->GPIO_InitStructure.Speed = GPIO_SPEED;
     HAL_GPIO_Init(gpio_cfg->GPIO, &(gpio_cfg->GPIO_InitStructure));
     if(rv = this->ClockEnable() != 0) return rv;
 }

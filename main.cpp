@@ -1,10 +1,8 @@
 #include "stm32_conf.h"
 
-ssd1306 Display;
 
 void Test(void *pvParameters) 
 {   
-    Display.Init();
     while(1) {
         vTaskDelay(1000);
     }
