@@ -4,23 +4,34 @@
 int gpio_class::Init(GPIO_TypeDef *GPIO, uint16_t GPIO_PIN, uint16_t GPIO_MODE, uint16_t GPIO_SPEED) 
 {   
     int rv;
-    gpio_cfg->GPIO = GPIO;
-    gpio_cfg->GPIO_InitStructure.Pin = GPIO_PIN;
-    gpio_cfg->GPIO_InitStructure.Mode = GPIO_MODE;
-    gpio_cfg->GPIO_InitStructure.Speed = GPIO_SPEED;
-    HAL_GPIO_Init(gpio_cfg->GPIO, &(gpio_cfg->GPIO_InitStructure));
+    cfg->GPIO = GPIO;
+    cfg->GPIO_InitStructure.Pin = GPIO_PIN;
+    cfg->GPIO_InitStructure.Mode = GPIO_MODE;
+    cfg->GPIO_InitStructure.Speed = GPIO_SPEED;
+    HAL_GPIO_Init(cfg->GPIO, &(cfg->GPIO_InitStructure));
+    if(rv = this->ClockEnable() != 0) return rv;
+}
+
+int gpio_class::Init(void) 
+{   
+    int rv;
+    if(cfg != nullptr) {
+        HAL_GPIO_Init(cfg->GPIO, &(cfg->GPIO_InitStructure));
+    } else {
+        return EINVAL;
+    }
     if(rv = this->ClockEnable() != 0) return rv;
 }
 
 int gpio_class::ClockEnable(void)
 {
-    switch (reinterpret_cast<uint32_t>(gpio_cfg->GPIO)) {
+    switch(reinterpret_cast<uint32_t>(cfg->GPIO)) {
 
-    #ifdef GPIOA
-            case GPIOA_BASE:
-                __HAL_RCC_GPIOA_CLK_ENABLE();
-                break;
-    #endif
+#ifdef GPIOA
+        case GPIOA_BASE:
+            __HAL_RCC_GPIOA_CLK_ENABLE();
+            break;
+#endif
 
 #ifdef GPIOB
         case GPIOB_BASE:

@@ -26,29 +26,29 @@
  * \detailed Consists of defines and SSD1306 class
  */
 
-struct ssd1306_cfg
+typedef struct ssd1306_cfg_t
 {
     i2c_class i2c;
-    gpio_class gpio;
-    
-}
-
-class ssd1306 
-{
-private:
     static constexpr uint16_t size = SSD1306_Heigth * SSD1306_Width / 8;
     uint8_t buf[size];
     uint16_t ptr;
     uint8_t continuation;
+};
+
+class ssd1306_class
+{
+private:
     void AddToBuf(uint8_t data);
     void ControlByte(uint8_t type);
     void Command(uint8_t cmd);
     void Data(uint8_t data);
+    void Write(void);
 public:
-    ssd1306() 
+    ssd1306_cfg_t *cfg;
+    ssd1306_class() 
     {
-        ptr = 0;
-        continuation = 0;
+        cfg->ptr = 0;
+        cfg->continuation = 0;
     }
     void Init(void);
 

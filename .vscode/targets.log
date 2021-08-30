@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 28 23:35:33 2021
+# Make data base, printed on Mon Aug 30 08:09:04 2021
 
 # Variables
 
@@ -53,11 +53,11 @@ SHELL = /bin/sh
 # makefile (from 'Makefile', line 61)
 NM = $(PREFIX)-nm
 # environment
-SNAP_DATA = /var/snap/code/67
+SNAP_DATA = /var/snap/code/72
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:37450
+JOURNAL_STREAM = 8:39138
 # makefile (from 'Makefile', line 81)
 CFLAGS = -Wall -Wextra $(DEFINES) $(MCUFLAGS) $(DEBUG_OPTIMIZE_FLAGS) $(CFLAGS_EXTRA) $(INCLUDES)
 # environment
@@ -95,12 +95,11 @@ VSCODE_VERBOSE_LOGGING = true
 # makefile (from 'Makefile', line 58)
 AS = $(PREFIX)-as
 # environment
-_ = /snap/code/67/usr/share/code/code
+_ = /snap/code/72/usr/share/code/code
 # makefile (from 'Makefile', line 33)
 OBJS = $(SOURCES_S:.s=.o) $(SOURCES_C:.c=.o) $(SOURCES_CXX:.cpp=.o)
 # environment
-MANAGERPID = 1032
- 
+MANAGERPID = 1034
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -108,7 +107,7 @@ LC_NAME = ru_RU.UTF-8
 # environment
 VSCODE_CWD = /home/optim
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/67/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/72/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -118,7 +117,7 @@ LD = $(PREFIX)-gcc
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/optim-Super-Power:@/tmp/.ICE-unix/1371,unix/optim-Super-Power:/tmp/.ICE-unix/1371
+SESSION_MANAGER = local/optim-Super-Power:@/tmp/.ICE-unix/1387,unix/optim-Super-Power:/tmp/.ICE-unix/1387
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -126,15 +125,15 @@ GDK_PIXBUF_MODULE_FILE = /home/optim/snap/code/common/.cache/gdk-pixbuf-loaders.
 # makefile (from 'Makefile', line 37)
 INC_CORE = -Imcu/$(MCU)/core
 # makefile (from 'Makefile', line 5)
-PROJECT = $(OUTPATH)/electric_load
+PROJECT = $(OUTPATH)/meteo_mini
 # environment
-SNAP = /snap/code/67
+SNAP = /snap/code/72
 # makefile (from 'Makefile', line 42)
 INC_CONF = -Iconf
 # makefile (from 'Makefile', line 68)
 OPENOCD = openocd
 # environment
-SNAP_VERSION = 507ce72a
+SNAP_VERSION = 3866c355
 # environment
 KICAD_PATH = /usr/share/kicad
 # makefile (from 'Makefile', line 59)
@@ -148,11 +147,11 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5df4f9ad-f6be-4856-ad08-b95f447cde66&iid=5df4f9ad-f6be-4856-ad08-b95f447cde66&sid=5df4f9ad-f6be-4856-ad08-b95f447cde66","uploadToServer":true}
 # environment
-INVOCATION_ID = 53fa8f6180764e5c9eaaeb650b55cb4b
+INVOCATION_ID = 5d608fb49a3443c39f5cd9459bedf115
 # makefile (from 'Makefile', line 84)
 LDFLAGS = -specs=nano.specs -specs=nosys.specs -static $(MCUFLAGS) -Wl,--start-group -lgcc -lc -lg -Wl,--end-group -Wl,--gc-sections -T mcu/$(MCU)/core/STM32F103XB_FLASH.ld
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/67/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/72/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -162,14 +161,14 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3722
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2619
 # makefile (from 'Makefile', line 65)
 SIZE = $(PREFIX)-size
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
-# makefile (from 'Makefile', line 114)
+# makefile (from 'Makefile', line 117)
 OPENOCD_P = 3333
 # environment
 VSCODE_PIPE_LOGGING = true
@@ -182,7 +181,7 @@ PWD = /home/optim/stm32/projects/meteo_mini
 # makefile (from 'Makefile', line 38)
 INC_HAL = -Imcu/$(MCU)/hal/inc
 # environment
-SSH_AGENT_PID = 1336
+SSH_AGENT_PID = 1351
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -195,10 +194,12 @@ HOME = /home/optim
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
-# makefile (from 'Makefile', line 50)
-DEFINES = -DSTM32 -DSTM32F1 -DSTM32F103xB -DHEAP_SIZE=$(HEAP_SIZE)
 # makefile (from 'Makefile', line 15)
 SOURCES_C_CORE = $(wildcard mcu/$(MCU)/core/*.c)
+# makefile (from 'Makefile', line 50)
+DEFINES = -DSTM32 -DSTM32F1 -DSTM32F103xB -DHEAP_SIZE=$(HEAP_SIZE)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/optim/.config/Code/CachedData/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
 # environment
 LOGNAME = optim
 # environment
@@ -219,7 +220,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
-# makefile (from 'Makefile', line 119)
+# makefile (from 'Makefile', line 122)
 GDB_P = 4242
 # environment
 LC_TIME = ru_RU.UTF-8
@@ -238,7 +239,7 @@ DEBUG_OPTIMIZE_FLAGS = -O0 -ggdb -gdwarf-2
 # makefile (from 'Makefile', line 8)
 HEAP_SIZE = 0x400
 # environment
-SNAP_USER_DATA = /home/optim/snap/code/67
+SNAP_USER_DATA = /home/optim/snap/code/72
 # environment
 SHLVL = 0
 # makefile (from 'Makefile', line 56)
@@ -248,7 +249,7 @@ GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
 ADF_PATH = /home/optim/esp32/esp-adf
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-23b50f39-0f90-4412-9ca4-9a04431be3f2.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2d3a433b-0748-43ec-b1b9-fcd7abdcfe99.sock
 # makefile (from 'Makefile', line 21)
 SOURCES_CXX_USR = $(wildcard usr/*.cpp)
 # default
@@ -256,13 +257,13 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = optim
 # environment
-SNAP_REVISION = 67
+SNAP_REVISION = 72
 # makefile (from 'Makefile', line 78)
 CFLAGS_EXTRA = -nostartfiles -nodefaultlibs -nostdlib -fdata-sections -ffunction-sections
 # environment
 LC_MONETARY = ru_RU.UTF-8
 # makefile
-.DEFAULT_GOAL := all
+.DEFAULT_GOAL := full
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # makefile (from 'Makefile', line 41)
@@ -275,18 +276,17 @@ LC_TELEPHONE = ru_RU.UTF-8
 SOURCES_CXX = $(wildcard *.cpp) $(SOURCES_CXX_USR)
 # makefile (from 'Makefile', line 19)
 SOURCES_C_HEAP = freertos/MemMang/heap_1.c
+ 
 # makefile (from 'Makefile', line 64)
 READELF = $(PREFIX)-readelf
 # default
 MAKE_COMMAND := make
-# environment
-VSCODE_NODE_CACHED_DATA_DIR = /home/optim/.config/Code/CachedData/507ce72a4466fbb27b715c3722558bb15afa9f48
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-25ca16da-1.57.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-25ca16da-1.59.1-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile (from 'Makefile', line 67)
@@ -327,6 +327,8 @@ MAKEFILES :=
 SNAP_COOKIE = MP4NnEvI-4FO69kHYqC36kz8TnVMYEfZEOhZjUF1R-TBcW4T9Uwv
 # environment
 LC_NUMERIC = ru_RU.UTF-8
+# environment
+VSCODE_BROWSER_CODE_LOADING = bypassHeatCheck
 # automatic
 <F = $(notdir $<)
 # environment
@@ -377,11 +379,10 @@ LC_ADDRESS = ru_RU.UTF-8
 INC_LIB = -Iusr
 # environment
 LANG = C
- 
 # environment
-VSCODE_PID = 3765
+VSCODE_PID = 2666
 # variable set hash-table stats:
-# Load=184/1024=18%, Rehash=0, Collisions=37/265=14%
+# Load=185/1024=18%, Rehash=0, Collisions=38/266=14%
 
 # Pattern-specific Variable Values
 
@@ -389,28 +390,28 @@ VSCODE_PID = 3765
 
 # Directories
 
-# . (device 2071, inode 2761969): 12 files, no impossibilities.
-# freertos/core/src (device 2071, inode 2900121): 7 files, no impossibilities.
-# mcu/stm32f103c8t6/core (device 2071, inode 2802504): 14 files, no impossibilities.
-# mcu/stm32f103c8t6/hal/src (device 2071, inode 2802508): 61 files, no impossibilities.
-# freertos/port/stm32f103c8t6 (device 2071, inode 2900123): 4 files, no impossibilities.
-# usr (device 2071, inode 2891486): 2 files, no impossibilities.
+# . (device 2070, inode 2761969): 12 files, no impossibilities.
+# freertos/core/src (device 2070, inode 2900047): 7 files, no impossibilities.
+# mcu/stm32f103c8t6/core (device 2070, inode 2802632): 14 files, no impossibilities.
+# mcu/stm32f103c8t6/hal/src (device 2070, inode 2802637): 61 files, no impossibilities.
+# freertos/port/stm32f103c8t6 (device 2070, inode 2900050): 4 files, no impossibilities.
+# usr (device 2070, inode 2802503): 11 files, no impossibilities.
 
-# 100 files, no impossibilities in 6 directories.
+# 109 files, no impossibilities in 6 directories.
 
 # Implicit Rules
 
 %.elf:
-#  recipe to execute (from 'Makefile', line 127):
+#  recipe to execute (from 'Makefile', line 130):
 	$(LD) $(OBJS) $(LDFLAGS) -o $@
 	$(SIZE) -A $@
 
 %.bin: %.elf
-#  recipe to execute (from 'Makefile', line 131):
+#  recipe to execute (from 'Makefile', line 134):
 	$(OBJCOPY) -O binary $< $@
 
 %.asm: %.elf
-#  recipe to execute (from 'Makefile', line 134):
+#  recipe to execute (from 'Makefile', line 137):
 	$(OBJDUMP) -dwh $< > $@
 
 # 3 implicit rules, 0 (0.0%) terminal.
@@ -457,7 +458,7 @@ gdb-server-ocd:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 109):
+#  recipe to execute (from 'Makefile', line 112):
 	$(OPENOCD) -f $(OPENOCD_SCRIPT_DIR)/board/bluepill.cfg
 
 # Not a target:
@@ -471,7 +472,7 @@ erase:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 106):
+#  recipe to execute (from 'Makefile', line 109):
 	st-flash erase
 
 # Not a target:
@@ -486,7 +487,7 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac_ex.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-all: dirs build/electric_load.bin build/electric_load.asm
+all: dirs build/meteo_mini.bin build/meteo_mini.asm
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
 #  Implicit rule search has not been done.
@@ -496,11 +497,11 @@ all: dirs build/electric_load.bin build/electric_load.asm
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
 
-gdb-openocd: build/electric_load.elf
+gdb-openocd: build/meteo_mini.elf
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 116):
+#  recipe to execute (from 'Makefile', line 119):
 	$(GDB) --eval-command="target extended-remote localhost:$(OPENOCD_P)" \
            --eval-command="load" $(PROJECT).elf
 
@@ -528,6 +529,12 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_sdmmc.o:
 #  File has not been updated.
 
 # Not a target:
+usr/ssd1306.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -549,6 +556,7 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd.o:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_adc.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 
 # Not a target:
@@ -575,6 +583,7 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pwr.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 # Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
@@ -584,9 +593,14 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pwr.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-06-17 09:49:14.640356
+#  Last modified 2021-08-28 13:16:42.831988659
 #  File has been updated.
 #  Successfully updated.
+
+full: clean all erase flash
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_pwr.o:
@@ -594,13 +608,20 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_pwr.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-build/electric_load.elf: mcu/stm32f103c8t6/core/startup_stm32f103xb.o mcu/stm32f103c8t6/core/system_stm32f1xx.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cec.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_can.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_tim.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_adc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_spi.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_gpio.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rcc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_crc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_usart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_exti.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sram.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_sdmmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_irda.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_wwdg.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_fsmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usb.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_pwr.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dma.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_iwdg.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rtc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_spi.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_mmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_hcd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_utils.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_i2c.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nand.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pccard.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_exti.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cortex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2c.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dac.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_smartcard.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dma.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_uart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_crc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nor.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pwr.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2s.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_eth.o freertos/core/src/queue.o freertos/core/src/croutine.o freertos/core/src/list.o freertos/core/src/tasks.o freertos/core/src/timers.o freertos/port/stm32f103c8t6/port.o freertos/MemMang/heap_1.o main.o
+# Not a target:
+build/meteo_mini.asm:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cec.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+usr/rcc.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -635,7 +656,7 @@ build:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=2/12=17%
-#  recipe to execute (from 'Makefile', line 94):
+#  recipe to execute (from 'Makefile', line 96):
 	mkdir -p ${OUTPATH}
 
 # Not a target:
@@ -646,13 +667,6 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_utils.o:
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dma.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-build/electric_load.asm:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -696,11 +710,17 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dma.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-gdb-st-util: build/electric_load.elf
+# Not a target:
+usr/gpio.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 121):
+
+gdb-st-util: build/meteo_mini.elf
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 124):
 	$(GDB) --eval-command="target extended-remote localhost:$(GDB_P)" \
            --eval-command="load" $(PROJECT).elf
 
@@ -723,6 +743,7 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dac.o:
 #  File has not been updated.
 
 # Not a target:
+ 
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2s.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -777,6 +798,12 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_can.o:
 #  File has not been updated.
 
 # Not a target:
+build/meteo_mini.bin:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -793,7 +820,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 97):
+#  recipe to execute (from 'Makefile', line 99):
 	$(RM) $(OBJS) $(PROJECT).elf $(PROJECT).bin $(PROJECT).asm
 	rm -rf ${OUTPATH}
 
@@ -816,13 +843,12 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_gpio.o:
 #  File has not been updated.
 
 # Not a target:
-build/electric_load.bin:
+mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc.o:
+build/meteo_mini.elf: mcu/stm32f103c8t6/core/startup_stm32f103xb.o mcu/stm32f103c8t6/core/system_stm32f1xx.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cec.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_can.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_tim.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_adc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_spi.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_gpio.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rcc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_crc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_usart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_exti.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sram.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_sdmmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_irda.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_wwdg.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_fsmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usb.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_pwr.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dma.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_iwdg.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rtc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_spi.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_mmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_hcd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_utils.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_i2c.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nand.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pccard.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_exti.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cortex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2c.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dac.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_smartcard.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dma.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_uart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_crc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nor.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pwr.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2s.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_eth.o freertos/core/src/queue.o freertos/core/src/croutine.o freertos/core/src/list.o freertos/core/src/tasks.o freertos/core/src/timers.o freertos/port/stm32f103c8t6/port.o freertos/MemMang/heap_1.o main.o usr/ssd1306.o usr/i2c.o usr/rcc.o usr/gpio.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -852,6 +878,12 @@ freertos/core/src/timers.o:
 #  File has not been updated.
 
 # Not a target:
+usr/i2c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rcc.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -876,6 +908,7 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rtc.o:
 #  File has not been updated.
 
 # Not a target:
+ 
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_wwdg.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -885,16 +918,18 @@ gdb-server-st:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 112):
+#  recipe to execute (from 'Makefile', line 115):
 	st-util
 
-flash: build/electric_load.bin
+flash: build/meteo_mini.bin
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 103):
+#  recipe to execute (from 'Makefile', line 105):
 	st-flash write $(PROJECT).bin 0x08000000
+	sudo st-flash reset
+	
 
 # Not a target:
 main.o:
@@ -931,7 +966,6 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio_ex.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 # Not a target:
 freertos/core/src/tasks.o:
@@ -970,19 +1004,19 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2c.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=85/1024=8%, Rehash=0, Collisions=18/183=10%
+# Load=90/1024=9%, Rehash=0, Collisions=18/196=9%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 183 / storage = 4860 B / avg = 26 B
-# current buf: size = 8162 B / used = 4860 B / count = 183 / avg = 26 B
+# strcache buffers: 1 (0) / strings = 197 / storage = 4980 B / avg = 25 B
+# current buf: size = 8162 B / used = 4980 B / count = 197 / avg = 25 B
 
-# strcache performance: lookups = 224 / hit rate = 18%
+# strcache performance: lookups = 243 / hit rate = 18%
 # hash-table stats:
-# Load=183/8192=2%, Rehash=0, Collisions=9/224=4%
-# Finished Make data base on Mon Jun 28 23:35:33 2021
+# Load=197/8192=2%, Rehash=0, Collisions=9/243=4%
+# Finished Make data base on Mon Aug 30 08:09:04 2021
 
  

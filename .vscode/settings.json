@@ -25,7 +25,8 @@
         "stm32f103xb.h": "c",
         "rcc.h": "c",
         "rcc_periph.h": "c",
-        "errno.h": "c"
+        "errno.h": "c",
+        "reent.h": "c"
     },
     "makefile.launchConfigurations": [
         {

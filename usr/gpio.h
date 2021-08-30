@@ -9,10 +9,9 @@ typedef struct cfg {
 
 class gpio_base_class
 {
-protected:
-    gpio_cfg_t *gpio_cfg;
 public:
     virtual int Init(GPIO_TypeDef *GPIO, uint16_t GPIO_PIN, uint16_t GPIO_MODE, uint16_t GPIO_SPEED) = 0;
+    gpio_cfg_t *cfg;
 };
 
 class gpio_class : public gpio_base_class, public rcc_periph_class
@@ -20,5 +19,6 @@ class gpio_class : public gpio_base_class, public rcc_periph_class
 public:
     gpio_class() { };
     int Init(GPIO_TypeDef *GPIO, uint16_t GPIO_PIN, uint16_t GPIO_MODE, uint16_t GPIO_SPEED);
+    int Init(void);
     int ClockEnable(void);
 };
