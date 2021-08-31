@@ -27,7 +27,6 @@ public:
     int Init(I2C_TypeDef *I2C);
     int ClockEnable(void);
     int Transmit(uint8_t *pdata, uint16_t length, uint16_t address);
-    int ClockEnable(void);
     int EV_Handler(void);
     int ER_Handler(void);
 };

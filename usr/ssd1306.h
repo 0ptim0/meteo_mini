@@ -26,7 +26,7 @@
  * \detailed Consists of defines and SSD1306 class
  */
 
-typedef struct ssd1306_cfg_t
+struct ssd1306_cfg_t
 {
     i2c_class i2c;
     static constexpr uint16_t size = SSD1306_Heigth * SSD1306_Width / 8;

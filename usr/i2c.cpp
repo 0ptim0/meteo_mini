@@ -8,8 +8,8 @@ int i2c_class::Init(i2c_cfg *cfg)
 {   
     int rv;
 
-    cfg->SCL.Init();
-    cfg->SDA.Init();
+    if( rv = cfg->SCL.Init() != 0) return rv;
+    if( rv = cfg->SDA.Init() != 0) return rv;
 
     NVIC_SetPriorityGrouping(0);
     if(cfg->I2C_InitStructure.Instance == I2C1) {
@@ -17,11 +17,13 @@ int i2c_class::Init(i2c_cfg *cfg)
         NVIC_EnableIRQ(I2C1_ER_IRQn);
         NVIC_SetPriority(I2C1_EV_IRQn, 11);
         NVIC_SetPriority(I2C1_ER_IRQn, 11);
-    } else {
+    } else if(cfg->I2C_InitStructure.Instance == I2C2) {
         NVIC_EnableIRQ(I2C2_EV_IRQn);
         NVIC_EnableIRQ(I2C2_ER_IRQn);
         NVIC_SetPriority(I2C2_EV_IRQn, 11);
         NVIC_SetPriority(I2C2_ER_IRQn, 11);
+    } else {
+        return EINVAL;
     }
 
     cfg->I2C_InitStructure.Init.ClockSpeed = 100000;
@@ -35,12 +37,15 @@ int i2c_class::Init(i2c_cfg *cfg)
     if(HAL_I2C_Init(&cfg->I2C_InitStructure) != HAL_OK) return EACCES;
     if(mutex == NULL) mutex = xSemaphoreCreateMutex();
     if(semaphore == NULL) semaphore = xSemaphoreCreateBinary();
+    return 0;
 }
 
 int i2c_class::Init(I2C_TypeDef *I2C)
 {
+    int rv;
     cfg->I2C_InitStructure.Instance = I2C;
-    Init(cfg);
+    rv = Init(cfg);
+    return rv;
 }
 
 int i2c_class::ClockEnable(void)
@@ -96,6 +101,7 @@ int i2c_class::EV_Handler(void)
             portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
         }
     }
+    return 0;
 }
 
 int i2c_class::ER_Handler(void) 
