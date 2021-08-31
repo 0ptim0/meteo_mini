@@ -23,9 +23,10 @@ class i2c_class : public rcc_periph_class
 private:
     const i2c_cfg_t *const cfg;
     I2C_HandleTypeDef I2C_InitStructure;
+    state_t state;
+private:
     gpio_class SCL;
     gpio_class SDA;
-    state_t state;
 public:
     i2c_class(const i2c_cfg_t *const cfg);
     int Init(void);

@@ -2,4 +2,4 @@
 build/
 .cortex*
 *.map
-*.log
+.vscode/*.log

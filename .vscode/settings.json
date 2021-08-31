@@ -27,7 +27,9 @@
         "rcc_periph.h": "c",
         "errno.h": "c",
         "reent.h": "c",
-        "i2c.h": "c"
+        "i2c.h": "c",
+        "ssd1306.h": "c",
+        "gpio.h": "c"
     },
     "makefile.launchConfigurations": [
         {
