@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 31 23:23:50 2021
+# Make data base, printed on Tue Aug 31 23:57:49 2021
 
 # Variables
 
@@ -271,12 +271,12 @@ INC_RTOS_PORT = -Ifreertos/port/$(MCU)
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
+ 
 LC_TELEPHONE = ru_RU.UTF-8
 # makefile (from 'Makefile', line 30)
 SOURCES_CXX = $(wildcard *.cpp) $(SOURCES_CXX_USR)
 # makefile (from 'Makefile', line 19)
 SOURCES_C_HEAP = freertos/MemMang/heap_1.c
- 
 # makefile (from 'Makefile', line 64)
 READELF = $(PREFIX)-readelf
 # default
@@ -396,9 +396,9 @@ VSCODE_PID = 6947
 # mcu/stm32f103c8t6/core (device 2070, inode 2802632): 16 files, no impossibilities.
 # mcu/stm32f103c8t6/hal/src (device 2070, inode 2802637): 119 files, no impossibilities.
 # freertos/port/stm32f103c8t6 (device 2070, inode 2900050): 5 files, no impossibilities.
-# usr (device 2070, inode 2802503): 9 files, no impossibilities.
+# usr (device 2070, inode 2802503): 15 files, no impossibilities.
 
-# 175 files, no impossibilities in 7 directories.
+# 181 files, no impossibilities in 7 directories.
 
 # Implicit Rules
 
@@ -422,42 +422,42 @@ VSCODE_PID = 6947
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usart.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.985003293
+#  Last modified 2021-08-31 23:30:59.307707155
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 freertos/port/stm32f103c8t6/port.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.485002741
+#  Last modified 2021-08-31 23:30:59.923700856
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_i2c.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.221004138
+#  Last modified 2021-08-31 23:30:58.215718329
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_uart.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.897003391
+#  Last modified 2021-08-31 23:30:59.235707891
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/core/system_stm32f1xx.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.013005473
+#  Last modified 2021-08-31 23:30:57.383726854
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 freertos/MemMang/heap_1.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.509002715
+#  Last modified 2021-08-31 23:30:59.95170057
 #  File has been updated.
 #  Successfully updated.
 
@@ -471,7 +471,7 @@ gdb-server-ocd:
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_smartcard.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.749003555
+#  Last modified 2021-08-31 23:30:59.079709486
 #  File has been updated.
 #  Successfully updated.
 
@@ -486,14 +486,14 @@ erase:
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usb.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.717004696
+#  Last modified 2021-08-31 23:30:57.955720992
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac_ex.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.461004978
+#  Last modified 2021-08-31 23:30:57.63972423
 #  File has been updated.
 #  Successfully updated.
 
@@ -505,6 +505,7 @@ all: dirs build/meteo_mini.bin build/meteo_mini.asm
 #  File has been updated.
 #  Successfully updated.
 
+ 
 gdb-openocd: build/meteo_mini.elf
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -516,21 +517,21 @@ gdb-openocd: build/meteo_mini.elf
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nor.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.089003178
+#  Last modified 2021-08-31 23:30:59.415706051
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.017003259
+#  Last modified 2021-08-31 23:30:59.339706828
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_sdmmc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.57700485
+#  Last modified 2021-08-31 23:30:57.88372173
 #  File has been updated.
 #  Successfully updated.
 
@@ -540,59 +541,65 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_sdmmc.o:
 #  File has not been updated.
 
 # Not a target:
+usr/ssd1306.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-31 23:31:00.023699834
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.99300439
+#  Last modified 2021-08-31 23:30:58.327717183
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.393005053
+#  Last modified 2021-08-31 23:30:57.731723288
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd.o:
 #  Implicit rule search has been done.
- 
-#  Last modified 2021-08-31 23:14:06.509004925
+#  Last modified 2021-08-31 23:30:57.815722427
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_adc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.249005213
+#  Last modified 2021-08-31 23:30:57.587724763
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_tim.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.23300523
+#  Last modified 2021-08-31 23:30:57.575724885
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sd.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.085005393
+#  Last modified 2021-08-31 23:30:59.451705682
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_eth.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.189003069
+#  Last modified 2021-08-31 23:30:59.567704495
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pwr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.121003144
+#  Last modified 2021-08-31 23:30:58.623714153
 #  File has been updated.
 #  Successfully updated.
 
@@ -611,14 +618,15 @@ full: clean all erase flash
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_pwr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.733004678
+#  Last modified 2021-08-31 23:30:57.967720869
 #  File has been updated.
 #  Successfully updated.
 
+ 
 build/meteo_mini.asm: build/meteo_mini.elf
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'build/meteo_mini'
-#  Last modified 2021-08-31 23:23:34.429889014
+#  Last modified 2021-08-31 23:31:00.215697872
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 137):
@@ -627,27 +635,27 @@ build/meteo_mini.asm: build/meteo_mini.elf
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cec.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.049005434
+#  Last modified 2021-08-31 23:30:57.419726485
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 usr/rcc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.625002586
+#  Last modified 2021-08-31 23:31:00.095699098
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_fsmc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.681004735
+#  Last modified 2021-08-31 23:30:59.531704863
 #  File has been updated.
 #  Successfully updated.
 
 build:
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-31 23:23:34.41788924
+#  Last modified 2021-08-31 23:31:00.203697996
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 96):
@@ -656,28 +664,28 @@ build:
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_utils.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.205004156
+#  Last modified 2021-08-31 23:30:58.587714521
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dma.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.805003493
+#  Last modified 2021-08-31 23:30:59.135708913
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc_ex.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.701003607
+#  Last modified 2021-08-31 23:30:59.027710017
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim_ex.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.665003648
+#  Last modified 2021-08-31 23:30:58.16771882
 #  File has been updated.
 #  Successfully updated.
 
@@ -691,28 +699,29 @@ dirs: build
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd_ex.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.95700443
+#  Last modified 2021-08-31 23:30:58.291717552
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 freertos/core/src/queue.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.261002989
+#  Last modified 2021-08-31 23:30:59.703703106
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dma.o:
+ 
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.845004554
+#  Last modified 2021-08-31 23:30:58.13171919
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 usr/gpio.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.68500252
+#  Last modified 2021-08-31 23:31:00.159698444
 #  File has been updated.
 #  Successfully updated.
 
@@ -727,63 +736,63 @@ gdb-st-util: build/meteo_mini.elf
 # Not a target:
 mcu/stm32f103c8t6/core/startup_stm32f103xb.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:05.965005526
+#  Last modified 2021-08-31 23:30:57.347727223
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cortex.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.421003917
+#  Last modified 2021-08-31 23:30:58.739712966
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dac.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.713003594
+#  Last modified 2021-08-31 23:30:59.039709895
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2s.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.157003103
+#  Last modified 2021-08-31 23:30:59.499705191
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_mmc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.077004298
+#  Last modified 2021-08-31 23:30:58.443715995
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_spi.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.041004337
+#  Last modified 2021-08-31 23:30:58.395716487
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash_ex.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.953003329
+#  Last modified 2021-08-31 23:30:59.291707317
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_irda.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.61300481
+#  Last modified 2021-08-31 23:30:57.455726116
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_spi.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.297005159
+#  Last modified 2021-08-31 23:30:57.603724599
 #  File has been updated.
 #  Successfully updated.
 
@@ -796,21 +805,22 @@ mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_spi.o:
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nand.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.257004098
+ 
+#  Last modified 2021-08-31 23:30:57.919721361
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_can.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.121005354
+#  Last modified 2021-08-31 23:30:57.491725746
 #  File has been updated.
 #  Successfully updated.
 
 build/meteo_mini.bin: build/meteo_mini.elf
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'build/meteo_mini'
-#  Last modified 2021-08-31 23:23:34.413889314
+#  Last modified 2021-08-31 23:31:00.203697996
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 134):
@@ -819,14 +829,14 @@ build/meteo_mini.bin: build/meteo_mini.elf
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.121004249
+#  Last modified 2021-08-31 23:30:58.523715176
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_iwdg.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.92100447
+#  Last modified 2021-08-31 23:30:58.25571792
 #  File has been updated.
 #  Successfully updated.
 
@@ -835,7 +845,6 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 99):
 	$(RM) $(OBJS) $(PROJECT).elf $(PROJECT).bin $(PROJECT).asm
 	rm -rf ${OUTPATH}
@@ -843,35 +852,35 @@ clean:
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.781004624
+#  Last modified 2021-08-31 23:30:58.019720335
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_crc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.357005093
+#  Last modified 2021-08-31 23:30:57.699723616
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_gpio.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.309005146
+#  Last modified 2021-08-31 23:30:57.651724107
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.181005287
+#  Last modified 2021-08-31 23:30:59.631703841
 #  File has been updated.
 #  Successfully updated.
 
-build/meteo_mini.elf: mcu/stm32f103c8t6/core/startup_stm32f103xb.o mcu/stm32f103c8t6/core/system_stm32f1xx.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cec.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_irda.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_can.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_wwdg.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_tim.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_adc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_spi.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_gpio.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rcc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_crc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_usart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_exti.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sram.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_sdmmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nand.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usb.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_pwr.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dma.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_i2c.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_iwdg.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rtc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_spi.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_mmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_utils.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pwr.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pccard.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_exti.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cortex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_hcd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2c.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dac.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_smartcard.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dma.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_uart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nor.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_crc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2s.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_fsmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_eth.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc.o freertos/core/src/queue.o freertos/core/src/croutine.o freertos/core/src/list.o freertos/core/src/tasks.o freertos/core/src/timers.o freertos/port/stm32f103c8t6/port.o freertos/MemMang/heap_1.o main.o usr/rcc.o usr/gpio.o
+build/meteo_mini.elf: mcu/stm32f103c8t6/core/startup_stm32f103xb.o mcu/stm32f103c8t6/core/system_stm32f1xx.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cec.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_irda.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_can.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_wwdg.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_tim.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_adc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_spi.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_gpio.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rcc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_crc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_usart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_exti.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sram.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_sdmmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nand.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usb.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_pwr.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dma.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_tim_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_i2c.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_iwdg.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pcd_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rtc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_spi.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_mmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_utils.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pwr.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pccard.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_exti.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_cortex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_hcd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2c.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_adc_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_dac.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_smartcard.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dma.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_uart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_usart.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_dac.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio_ex.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_nor.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sd.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_crc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2s.o mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_fsmc.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_eth.o mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc.o freertos/core/src/queue.o freertos/core/src/croutine.o freertos/core/src/list.o freertos/core/src/tasks.o freertos/core/src/timers.o freertos/port/stm32f103c8t6/port.o freertos/MemMang/heap_1.o main.o usr/ssd1306.o usr/i2c.o usr/rcc.o usr/gpio.o
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'build/meteo_mini'
-#  Last modified 2021-08-31 23:23:34.40988939
+#  Last modified 2021-08-31 23:31:00.195698077
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 130):
@@ -881,63 +890,71 @@ build/meteo_mini.elf: mcu/stm32f103c8t6/core/startup_stm32f103xb.o mcu/stm32f103
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_sram.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.545004886
+#  Last modified 2021-08-31 23:30:57.851722058
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
+ 
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.217005248
+#  Last modified 2021-08-31 23:30:57.559725049
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_crc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.969003311
+#  Last modified 2021-08-31 23:30:59.46370556
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 freertos/core/src/timers.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.453002777
+#  Last modified 2021-08-31 23:30:59.895701143
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+usr/i2c.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-31 23:31:00.03969967
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rcc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.325005128
+#  Last modified 2021-08-31 23:30:57.663723985
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_exti.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.325004023
+#  Last modified 2021-08-31 23:30:58.691713457
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_pccard.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.289004062
+#  Last modified 2021-08-31 23:30:58.655713824
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_rtc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.005004377
+#  Last modified 2021-08-31 23:30:58.343717019
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_wwdg.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.645004774
+#  Last modified 2021-08-31 23:30:57.523725418
 #  File has been updated.
 #  Successfully updated.
 
@@ -961,101 +978,101 @@ flash: build/meteo_mini.bin
 # Not a target:
 main.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:21:47.224081199
+#  Last modified 2021-08-31 23:31:00.007699997
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 freertos/core/src/croutine.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.281002967
+#  Last modified 2021-08-31 23:30:59.723702901
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_ll_exti.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.477004961
+#  Last modified 2021-08-31 23:30:57.779722796
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_flash.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.829004571
+#  Last modified 2021-08-31 23:30:58.071719804
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_hcd.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.157004209
+#  Last modified 2021-08-31 23:30:58.775712597
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_gpio_ex.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.053003219
+#  Last modified 2021-08-31 23:30:59.379706418
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 freertos/core/src/tasks.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.40500283
+#  Last modified 2021-08-31 23:30:59.847701633
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rcc_ex.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.369003974
+#  Last modified 2021-08-31 23:30:58.115719354
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 freertos/core/src/list.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:08.309002936
+#  Last modified 2021-08-31 23:30:59.747702656
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_usart.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.429005014
+#  Last modified 2021-08-31 23:30:57.767722919
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_rtc_ex.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:06.281005177
+#  Last modified 2021-08-31 23:30:58.203718452
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 mcu/stm32f103c8t6/hal/src/stm32f1xx_hal_i2c.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-31 23:14:07.633003683
+#  Last modified 2021-08-31 23:30:58.991710386
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=88/1024=9%, Rehash=0, Collisions=22/198=11%
+# Load=90/1024=9%, Rehash=0, Collisions=22/202=11%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 260 / storage = 6239 B / avg = 23 B
-# current buf: size = 8162 B / used = 6239 B / count = 260 / avg = 23 B
+# strcache buffers: 1 (0) / strings = 268 / storage = 6315 B / avg = 23 B
+# current buf: size = 8162 B / used = 6315 B / count = 268 / avg = 23 B
 
-# strcache performance: lookups = 314 / hit rate = 17%
+# strcache performance: lookups = 322 / hit rate = 16%
 # hash-table stats:
-# Load=260/8192=3%, Rehash=0, Collisions=12/314=4%
-# Finished Make data base on Tue Aug 31 23:23:50 2021
+# Load=268/8192=3%, Rehash=0, Collisions=14/322=4%
+# Finished Make data base on Tue Aug 31 23:57:49 2021
 
  

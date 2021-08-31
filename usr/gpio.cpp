@@ -17,6 +17,18 @@ int gpio_class::Init(void)
     return 0;
 }
 
+int gpio_class::SetConf(const gpio_cfg_t *const cfg) 
+{   
+    int rv;
+    if(cfg != nullptr) {
+        HAL_GPIO_Init(cfg->GPIO, (GPIO_InitTypeDef *)&cfg->GPIO_InitStructure);
+    } else {
+        return EINVAL;
+    }
+    return 0;
+}
+
+
 int gpio_class::ClockEnable(void)
 {
     switch(reinterpret_cast<uint32_t>(cfg->GPIO)) {

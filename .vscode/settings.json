@@ -26,7 +26,8 @@
         "rcc.h": "c",
         "rcc_periph.h": "c",
         "errno.h": "c",
-        "reent.h": "c"
+        "reent.h": "c",
+        "i2c.h": "c"
     },
     "makefile.launchConfigurations": [
         {
