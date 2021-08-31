@@ -81,7 +81,7 @@ CFLAGS_EXTRA = -nostartfiles -nodefaultlibs -nostdlib \
 CFLAGS += $(DEFINES) $(MCUFLAGS) $(DEBUG_OPTIMIZE_FLAGS) $(CFLAGS_EXTRA) $(INCLUDES)
 CXXFLAGS = $(DEFINES) $(MCUFLAGS) $(DEBUG_OPTIMIZE_FLAGS) $(INCLUDES) -std=c++17
 
-LDFLAGS = -specs=nano.specs -specs=nosys.specs -static $(MCUFLAGS) -Wl,--start-group -lgcc -lc -lg -Wl,--end-group \
+LDFLAGS = -l"stdc++" -specs=nano.specs -specs=nosys.specs -static $(MCUFLAGS) -Wl,--start-group -lgcc -lc -lg -Wl,--end-group \
           -Wl,--gc-sections -T mcu/$(MCU)/core/STM32F103XB_FLASH.ld
 
 .PHONY: dirs all clean flash erase

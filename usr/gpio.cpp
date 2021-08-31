@@ -1,27 +1,19 @@
 #include "stm32_base.h"
 #include "gpio.h"
 
-int gpio_class::Init(GPIO_TypeDef *GPIO, uint32_t GPIO_PIN, uint32_t GPIO_MODE, uint32_t GPIO_SPEED) 
-{   
-    int rv;
-    cfg->GPIO = GPIO;
-    cfg->GPIO_InitStructure.Pin = GPIO_PIN;
-    cfg->GPIO_InitStructure.Mode = GPIO_MODE;
-    cfg->GPIO_InitStructure.Speed = GPIO_SPEED;
-    HAL_GPIO_Init(cfg->GPIO, &(cfg->GPIO_InitStructure));
-    if(rv = this->ClockEnable() != 0) return rv;
-    return 0;
+gpio_class::gpio_class(const gpio_cfg_t *const cfg) : cfg(cfg) 
+{
 }
 
 int gpio_class::Init(void) 
 {   
     int rv;
+    if(rv = this->ClockEnable() != 0) return rv;
     if(cfg != nullptr) {
-        HAL_GPIO_Init(cfg->GPIO, &(cfg->GPIO_InitStructure));
+        HAL_GPIO_Init(cfg->GPIO, (GPIO_InitTypeDef *)&cfg->GPIO_InitStructure);
     } else {
         return EINVAL;
     }
-    if(rv = this->ClockEnable() != 0) return rv;
     return 0;
 }
 
