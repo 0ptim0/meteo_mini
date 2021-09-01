@@ -1,6 +1,7 @@
 #pragma once
 #include "stm32_base.h"
 #include "i2c.h"
+#include "font.h"
 
 /* Default parameters for SSD1306 128x32 */
 
@@ -56,6 +57,46 @@ public:
     void Init(void);
     void SetCursor(uint8_t page, uint8_t col);
     void Clear(void);
-    void Print(char *string);
-    void Print(float number);
+    // void Print(char *string);
+
+    template<typename num>
+    void Print(num number);
+
 };
+
+template<>
+void ssd1306_class::Print(const char *string);
+
+template<>
+void ssd1306_class::Print(char *string);
+
+template<typename num>
+void ssd1306_class::Print(num number)
+{
+    char data[10] = {0};
+    float2char(number, data, 2);
+    Print(data);
+    ssd1306_class::Write();
+}
+
+template<>
+void ssd1306_class::Print(const char *string)
+{
+    for(int i = 0; (*(string + i) != '\0' && i < ssd1306_class::cfg->width); i++) {
+        for(int j = 0; j < 6; j++) {
+            ssd1306_class::Data(Font8[(*(string + i) - ssd1306_class::cfg->height) * 6 + j]);
+        }
+    }
+    ssd1306_class::Write();
+}
+
+template<>
+void ssd1306_class::Print(char *string)
+{
+    for(int i = 0; (*(string + i) != '\0' && i < ssd1306_class::cfg->width); i++) {
+        for(int j = 0; j < 6; j++) {
+            ssd1306_class::Data(Font8[(*(string + i) - ssd1306_class::cfg->height) * 6 + j]);
+        }
+    }
+    ssd1306_class::Write();
+}
