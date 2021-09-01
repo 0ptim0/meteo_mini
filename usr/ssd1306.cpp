@@ -167,6 +167,14 @@ void ssd1306_class::Print(char *string)
     Write();
 }
 
+void ssd1306_class::Print(float number) 
+{
+    char data[10] = {0};
+    float2char(number, data, 2);
+    Print(data);
+    Write();
+}
+
 void ssd1306_class::Write(void)
 {
     i2c.Transmit(buf, ptr, 

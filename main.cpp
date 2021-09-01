@@ -8,12 +8,22 @@ void Test(void *pvParameters)
     ssd1306.Clear();
     ssd1306.SetCursor(0,34);
     ssd1306.Print("METEO-mini");
+
     ssd1306.SetCursor(1,10);
     ssd1306.Print("Temperature");
+    ssd1306.SetCursor(1,90);
+    ssd1306.Print(20.0);
+
     ssd1306.SetCursor(2,10);
     ssd1306.Print("Humidity");
+    ssd1306.SetCursor(2,90);
+    ssd1306.Print(50.0);
+
     ssd1306.SetCursor(3,10);
     ssd1306.Print("Pressure");
+    ssd1306.SetCursor(3,90);
+    ssd1306.Print(760.0);
+
     while(1) {
         vTaskDelay(1000);
     }

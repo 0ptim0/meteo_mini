@@ -57,5 +57,5 @@ public:
     void SetCursor(uint8_t page, uint8_t col);
     void Clear(void);
     void Print(char *string);
-    void Print(float *string);
+    void Print(float number);
 };
