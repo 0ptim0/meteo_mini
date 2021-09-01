@@ -115,8 +115,8 @@ void ssd1306_class::Init(void)
     Command(0xD3); // Vertical offset is
     Command(0x00); // ZERO
     Command(0x40); // Set startline (0x40 - 0x7F)
-    Command(0xA0); // Set segment remap (not use)
-    Command(0xC0); // Set output scan direction (not use)
+    Command(0xA1); // Set segment remap (not use)
+    Command(0xC8); // Set output scan direction (not use)
     Command(0xDA); // Set COM pins hardware config (not use)
     Command(0x02); // 0xDA -> 0x02 standart (not use)
     Command(0x81); // Set contrast
