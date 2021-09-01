@@ -38,4 +38,5 @@
             "binaryArgs": []
         }
     ],
+    "cortex-debug.variableUseNaturalFormat": false,
 }

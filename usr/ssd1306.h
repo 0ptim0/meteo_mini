@@ -52,5 +52,10 @@ private:
 public:
     i2c_class i2c;
     ssd1306_class(const ssd1306_cfg_t *const cfg);
+public:
     void Init(void);
+    void SetCursor(uint8_t page, uint8_t col);
+    void Clear(void);
+    void Print(char *string);
+    void Print(float *string);
 };
