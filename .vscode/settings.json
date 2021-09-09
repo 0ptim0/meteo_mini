@@ -1,0 +1,42 @@
+{
+    "cortex-debug.armToolchainPath": "/usr/local/share/gcc-arm-none-eabi-10-2020-q4-major/bin/",
+    "cortex-debug.openocdPath": "/usr/bin/openocd",
+    "files.associations": {
+        "limits": "cpp",
+        "climits": "cpp",
+        "cmath": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "cstdarg": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "exception": "cpp",
+        "type_traits": "cpp",
+        "new": "cpp",
+        "*.tcc": "cpp",
+        "cstdint": "cpp",
+        "typeinfo": "cpp",
+        "stm32_conf.h": "c",
+        "stm32_usr.h": "c",
+        "stm32_base.h": "c",
+        "stm32_hal_conf.h": "c",
+        "stm32f1xx_hal_conf.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "stm32f103xb.h": "c",
+        "rcc.h": "c",
+        "rcc_periph.h": "c",
+        "errno.h": "c",
+        "reent.h": "c",
+        "i2c.h": "c",
+        "ssd1306.h": "c",
+        "gpio.h": "c"
+    },
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/optim/stm32/projects/meteo_mini/build",
+            "binaryPath": "/home/optim/stm32/projects/meteo_mini/build/meteo_mini.elf",
+            "binaryArgs": []
+        }
+    ],
+    "cortex-debug.variableUseNaturalFormat": true,
+}

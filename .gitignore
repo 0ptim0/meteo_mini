@@ -1,3 +1,5 @@
-Debug
-.settings/
-*.launch
+**.o
+build/
+.cortex*
+*.map
+.vscode/*.log
