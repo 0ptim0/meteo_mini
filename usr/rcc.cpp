@@ -1,7 +1,7 @@
 #include "stm32_base.h"
 #include "rcc.h"
 
-void rcc::InitClock() 
+void rcc_class::InitClock() 
 {
     RCC_OscInitStructure.OscillatorType = RCC_OSCILLATORTYPE_HSI;
     RCC_OscInitStructure.HSIState = RCC_HSI_ON;
@@ -17,10 +17,4 @@ void rcc::InitClock()
     RCC_ClkInitStructure.APB1CLKDivider = RCC_HCLK_DIV2;
     RCC_ClkInitStructure.APB2CLKDivider = RCC_HCLK_DIV1;
     while(HAL_RCC_ClockConfig(&RCC_ClkInitStructure, FLASH_LATENCY_2) != HAL_OK);
-}
-
-void rcc::InitPeriph() 
-{
-    __HAL_RCC_GPIOB_CLK_ENABLE();
-    __HAL_RCC_I2C1_CLK_ENABLE();
 }

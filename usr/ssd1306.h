@@ -52,51 +52,13 @@ private:
     void Write(void);
 public:
     i2c_class i2c;
+    i2c_class *i2c_ptr;
     ssd1306_class(const ssd1306_cfg_t *const cfg);
+    ssd1306_class(const ssd1306_cfg_t *const cfg, i2c_class *i2c_ptr);
 public:
     void Init(void);
     void SetCursor(uint8_t page, uint8_t col);
     void Clear(void);
-    // void Print(char *string);
-
-    template<typename num>
-    void Print(num number);
-
+    void Print(char *string); // TODO: use templates
+    void Print(float number);
 };
-
-template<>
-void ssd1306_class::Print(const char *string);
-
-template<>
-void ssd1306_class::Print(char *string);
-
-template<typename num>
-void ssd1306_class::Print(num number)
-{
-    char data[10] = {0};
-    float2char(number, data, 2);
-    Print(data);
-    ssd1306_class::Write();
-}
-
-template<>
-void ssd1306_class::Print(const char *string)
-{
-    for(int i = 0; (*(string + i) != '\0' && i < ssd1306_class::cfg->width); i++) {
-        for(int j = 0; j < 6; j++) {
-            ssd1306_class::Data(Font8[(*(string + i) - ssd1306_class::cfg->height) * 6 + j]);
-        }
-    }
-    ssd1306_class::Write();
-}
-
-template<>
-void ssd1306_class::Print(char *string)
-{
-    for(int i = 0; (*(string + i) != '\0' && i < ssd1306_class::cfg->width); i++) {
-        for(int j = 0; j < 6; j++) {
-            ssd1306_class::Data(Font8[(*(string + i) - ssd1306_class::cfg->height) * 6 + j]);
-        }
-    }
-    ssd1306_class::Write();
-}

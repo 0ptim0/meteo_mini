@@ -2,13 +2,20 @@
 #include "ssd1306.h"
 
 ssd1306_class::ssd1306_class(const ssd1306_cfg_t *const cfg) 
-                : cfg(cfg), i2c(cfg->i2c_cfg)
+                            : cfg(cfg), i2c(cfg->i2c_cfg)
+{
+    i2c_ptr = &i2c;
+}
+
+ssd1306_class::ssd1306_class(const ssd1306_cfg_t *const cfg, i2c_class *i2c_ptr) 
+                            : cfg(cfg), i2c({0}), i2c_ptr(i2c_ptr)
 {
 }
 
+
 void ssd1306_class::Init(void)
 {   
-    i2c.Init();
+    i2c_ptr->Init();
     Command(0xAE); // 0xAE - OFF display, OxAF - ON display
     Command(0xA8); // Set multiplex ratio:
     Command(0x1F); // 128x32
@@ -57,27 +64,26 @@ void ssd1306_class::Clear(void)
     SetCursor(0,0);
 }
 
-// void ssd1306_class::Print(char *string) 
-// {
-//     for(int i = 0; (*(string + i) != '\0' && i < cfg->width); i++) {
-//         for(int j = 0; j < 6; j++) {
-//             Data(Font8[(*(string + i) - cfg->height) * 6 + j]);
-//         }
-//     }
-//     Write();
-// }
+void ssd1306_class::Print(char *string) 
+{
+    for(int i = 0; (*(string + i) != '\0' && i < cfg->width); i++) {
+        for(int j = 0; j < 6; j++) {
+            Data(Font8[(*(string + i) - cfg->height) * 6 + j]);
+        }
+    }
+    Write();
+}
 
-// void ssd1306_class::Print(float number) 
-// {
-//     char data[10] = {0};
-//     float2char(number, data, 2);
-//     Print(data);
-//     Write();
-// }
+void ssd1306_class::Print(float number) 
+{
+    char data[10] = {0};
+    float2char(number, data, 2);
+    Print(data);
+}
 
 void ssd1306_class::Write(void)
 {
-    i2c.Transmit(buf, ptr, 
+    i2c_ptr->Transmit(buf, ptr, 
         (cfg->address << 1) | SSD1306_WriteMode);
     ptr = 0;
 }

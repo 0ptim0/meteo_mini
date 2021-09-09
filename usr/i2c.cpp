@@ -87,6 +87,26 @@ int i2c_class::Transmit(uint8_t *pdata, uint16_t length, uint16_t address)
     }
 }
 
+int i2c_class::Receive(uint8_t *pdata, uint16_t length, uint16_t address) 
+{   
+    state = state_t::Busy;
+    if(xSemaphoreTake(mutex, cfg->timeout) == pdTRUE) {
+
+        HAL_I2C_Master_Receive_IT(&I2C_InitStructure, address, pdata, length);
+
+        if(xSemaphoreTake(semaphore, pdMS_TO_TICKS(cfg->timeout)) == pdFALSE) {
+            xSemaphoreGive(mutex);
+            return ETIME;
+        } else {
+            xSemaphoreGive(mutex);
+            state = state_t::Done;
+            return 0;
+        }
+    } else {
+        return ETIME;
+    }
+}
+
 int i2c_class::EV_Handler(void) 
 {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;

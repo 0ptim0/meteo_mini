@@ -32,6 +32,7 @@ public:
     int Init(void);
     int ClockEnable(void);
     int Transmit(uint8_t *pdata, uint16_t length, uint16_t address);
+    int Receive(uint8_t *pdata, uint16_t length, uint16_t address);
     int EV_Handler(void);
     int ER_Handler(void);
 };
