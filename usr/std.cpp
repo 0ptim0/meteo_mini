@@ -75,7 +75,7 @@ void float2digits(float number, uint8_t (&dig)[4], uint8_t precision, uint8_t di
     if((number - (int)number) >= 0.5) {
         number += 1;
     }
-    
+
     dig[3] = ((int)number / 1000);
     dig[2] = ((int)number - dig[3] * 1000) / 100;
     dig[1] = ((int)number - dig[3] * 1000 - dig[2] * 100) / 10;

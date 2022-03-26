@@ -4,16 +4,16 @@
 static SemaphoreHandle_t mutex;
 static SemaphoreHandle_t semaphore;
 
-i2c_class::i2c_class(const i2c_cfg_t *const cfg) 
+i2c_class::i2c_class(const i2c_cfg_t *const cfg)
             : cfg(cfg), SCL(cfg->scl_cfg), SDA(cfg->sda_cfg)
 {
 }
 
 int i2c_class::Init(void)
-{   
+{
     int rv;
     if(rv = this->ClockEnable() != 0) return rv;
-    
+
     if( rv = SCL.Init() != 0) return rv;
     if( rv = SDA.Init() != 0) return rv;
 
@@ -67,8 +67,8 @@ int i2c_class::ClockEnable(void)
     return 0;
 }
 
-int i2c_class::Transmit(uint8_t *pdata, uint16_t length, uint16_t address) 
-{   
+int i2c_class::Transmit(uint8_t *pdata, uint16_t length, uint16_t address)
+{
     state = state_t::Busy;
     if(xSemaphoreTake(mutex, cfg->timeout) == pdTRUE) {
 
@@ -87,8 +87,8 @@ int i2c_class::Transmit(uint8_t *pdata, uint16_t length, uint16_t address)
     }
 }
 
-int i2c_class::Receive(uint8_t *pdata, uint16_t length, uint16_t address) 
-{   
+int i2c_class::Receive(uint8_t *pdata, uint16_t length, uint16_t address)
+{
     state = state_t::Busy;
     if(xSemaphoreTake(mutex, cfg->timeout) == pdTRUE) {
 
@@ -107,7 +107,7 @@ int i2c_class::Receive(uint8_t *pdata, uint16_t length, uint16_t address)
     }
 }
 
-int i2c_class::EV_Handler(void) 
+int i2c_class::EV_Handler(void)
 {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
@@ -122,7 +122,7 @@ int i2c_class::EV_Handler(void)
     return 0;
 }
 
-int i2c_class::ER_Handler(void) 
+int i2c_class::ER_Handler(void)
 {
     while(1);
 }

@@ -4,8 +4,8 @@ ssd1306_class ssd1306(&ssd1306_cfg);
 bme280_class bme280(&bme280_cfg, &ssd1306.i2c);
 rcc_class rcc;
 
-void Test(void *pvParameters) 
-{   
+void Test(void *pvParameters)
+{
     rcc.InitClock();
     ssd1306.Init();
     bme280.Init();
@@ -41,7 +41,7 @@ void Test(void *pvParameters)
     }
 }
 
-int main(void) 
+int main(void)
 {
     HAL_Init();
     xTaskCreate(Test, "Test", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
@@ -56,9 +56,8 @@ extern "C" { // TODO: create handler
         ssd1306.i2c.EV_Handler();
     }
 
-    void I2C1_ER_IRQHandler() 
+    void I2C1_ER_IRQHandler()
     {
         ssd1306.i2c.ER_Handler();
     }
 }
-

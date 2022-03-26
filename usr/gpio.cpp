@@ -1,12 +1,12 @@
 #include "stm32_base.h"
 #include "gpio.h"
 
-gpio_class::gpio_class(const gpio_cfg_t *const cfg) : cfg(cfg) 
+gpio_class::gpio_class(const gpio_cfg_t *const cfg) : cfg(cfg)
 {
 }
 
-int gpio_class::Init(void) 
-{   
+int gpio_class::Init(void)
+{
     int rv;
     if(rv = this->ClockEnable() != 0) return rv;
     if(cfg != nullptr) {
@@ -17,8 +17,8 @@ int gpio_class::Init(void)
     return 0;
 }
 
-int gpio_class::SetConf(const gpio_cfg_t *const cfg) 
-{   
+int gpio_class::SetConf(const gpio_cfg_t *const cfg)
+{
     int rv;
     if(cfg != nullptr) {
         HAL_GPIO_Init(cfg->GPIO, (GPIO_InitTypeDef *)&cfg->GPIO_InitStructure);
@@ -87,4 +87,3 @@ int gpio_class::ClockEnable(void)
 
     return 0;
 }
-

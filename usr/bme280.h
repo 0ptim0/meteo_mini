@@ -3,7 +3,7 @@
 #include "i2c.h"
 
 /* Parameters for BME280 */
- 
+
 /* Address */
 #define BME280_Address 0x76
 
@@ -41,7 +41,7 @@
 #define BME280_ResetByte           0xB6
 
 /**
- * \file 
+ * \file
  * \brief BME280 temperature, pressure, humidity sensor
  * \detailed Consists of defines and SSD1306 class
  */
@@ -51,7 +51,7 @@ typedef long signed int bme280_s32_t;
 typedef long unsigned int bme280_u32_t;
 typedef long long signed int bme280_s64_t;
 
-struct calib_t 
+struct calib_t
 {
     unsigned short dig_T1;
     signed short dig_T2;
